@@ -1,35 +1,73 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* Page regions */
+.page {
+    padding-block: 2rem 3rem;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+/* Generic sections */
+.section {
+    padding-block: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.section:first-child {
+    border-top: 0;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* Cards / surfaces (dark theme) */
+.card {
+    /*background: rgba(255,255,255,0.03);*/
+    /*border: 1px solid rgba(255,255,255,0.08);*/
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: saturate(120%) blur(4px);
 }
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    /*border: 1px solid rgba(255,255,255,0.14);*/
+    /*background: rgba(255,255,255,0.06);*/
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 120ms ease, border-color 120ms ease, background-color 120ms ease;
+}
+
+.button:hover {
+    border-color: rgba(255,255,255,0.28);
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-1px);
+}
+
+.hero {
+    padding-block: clamp(1rem, 8vw, 2rem);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Text tone helpers */
+.muted { color: rgba(255,255,255,0.7); }
+.subtle { color: rgba(255,255,255,0.55); }
+
+/* Link underline accent under dark bg (used outside header nav) */
+.underline-link {
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.35);
+}
+.underline-link:hover {
+    text-decoration-color: rgba(255,255,255,0.75);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0.65rem 0.5rem;
+    text-align: left;
+}
+th { color: rgba(255,255,255,0.8); font-weight: 600; }

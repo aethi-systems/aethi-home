@@ -1,0 +1,25 @@
+:root {
+    --aethi-bg: #000;
+    --aethi-fg: #fff;
+}
+
+html, body, #app {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--aethi-bg);
+    color: var(--aethi-fg);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img.logo {
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    image-rendering: auto;
+}
+
+.hero {
+
+}
